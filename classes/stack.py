@@ -1,3 +1,4 @@
+# node class for develping linked list
 class Node:
 
     def __init__(self, data=None, pointer=None):
@@ -26,8 +27,9 @@ class Stack:
         self.buttom = buttom
         self.top = top
 
+    # push operation
     def push(self, data):
-        
+
         if self.buttom == None:
             self.buttom = self.top = Node(data)
         else:
@@ -35,8 +37,9 @@ class Stack:
             self.top = new_node
         return self
 
+    # pop operation
     def pop(self):
-        
+
         if self.top == None:
             return None
 
@@ -45,9 +48,11 @@ class Stack:
 
         return data
 
+    # peek operation
     def peek(self):
         return self.top.get_data()
 
+    # returns stack as list
     def as_list(self):
 
         curr_node = self.top
@@ -61,6 +66,7 @@ class Stack:
 
         return stack_list
 
+    # returns True if stack empty and False if its not
     def is_empty(self):
         if self.top:
             return False
