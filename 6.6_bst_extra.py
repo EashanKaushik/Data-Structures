@@ -17,6 +17,7 @@ class BSTExtra(BST):
 			h = max(lh, rh) + 1
 			return h
 
+	# height using recursion
 	def height(self):
 
 		if not self.root:
