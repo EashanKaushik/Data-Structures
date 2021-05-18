@@ -1,3 +1,4 @@
+# Node class for develping a linked list
 class Node:
 
     def __init__(self, data=None, pointer=None):
@@ -20,12 +21,14 @@ class Node:
         return f'(data: {self.data} & pointer: {self.pointer})'
 
 
+# Queue class
 class Queue:
 
     def __init__(self, front=None, back=None):
         self.front = front
         self.back = back
 
+    # queue operation
     def queue(self, data):
         if self.front == None:
             self.front = self.back = Node(data)
@@ -35,6 +38,7 @@ class Queue:
             self.back = self.back.get_pointer()
         return self
 
+    # dequeue operation
     def dequeue(self):
         if self.front == None:
             return None
@@ -44,9 +48,11 @@ class Queue:
 
         return data
 
+    # peek operation
     def peek(self):
         return self.top.get_data
 
+    # current size of the queue
     def size(self):
 
         count = 0
@@ -58,6 +64,7 @@ class Queue:
 
         return count
 
+    # return queue as list
     def as_list(self):
         curr_node = self.front
         stack_list = list()
@@ -70,13 +77,14 @@ class Queue:
 
         return stack_list
 
+    # returns True if queue is empty and False if queue not empty
     def is_empty(self):
 
         if self.front:
             return False
         else:
             return True
-    
+
     def __str__(self):
         return f'front: {self.front} & back: {self.back}'
 
@@ -89,4 +97,3 @@ if __name__ == '__main__':
     queue.queue('Facebook')
     print(queue.queue('Udemy'))
     print(queue.dequeue())
-
