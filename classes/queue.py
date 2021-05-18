@@ -47,6 +47,17 @@ class Queue:
     def peek(self):
         return self.top.get_data
 
+    def size(self):
+
+        count = 0
+        curr_node = self.front
+
+        while curr_node:
+            count += 1
+            curr_node = curr_node.get_pointer()
+
+        return count
+
     def as_list(self):
         curr_node = self.front
         stack_list = list()
