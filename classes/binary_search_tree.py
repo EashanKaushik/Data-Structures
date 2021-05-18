@@ -1,3 +1,4 @@
+# Node class for develping Linked list
 class Node:
 
 	def __init__(self, data=None, left=None, right=None):
@@ -39,8 +40,9 @@ class BST:
 	def __init__(self, root=None):
 		self.root = None
 
+	# insert operation
 	def insert(self, value):
-		
+
 		if self.lookup(value):
 			return None
 
@@ -66,6 +68,7 @@ class BST:
 
 		return self
 
+	# lookup operation
 	def lookup(self, value):
 		if self.root == None:
 			return False
@@ -83,6 +86,7 @@ class BST:
 						return False
 					curr_node = curr_node.left
 
+	# remove operation
 	def remove(self, value):
 		# check is root node is empty
 		if self.root == None or not self.lookup(value):
