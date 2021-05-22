@@ -14,7 +14,7 @@ def bellman_ford(graph, vertex):
     # check for update after every iteration if no update we break
     update = False
     iteration = 0
-    
+
     while iteration < number_of_nodes - 1:
         for source, destination in edge_list:
             # relaxation condition
@@ -65,4 +65,4 @@ if __name__ == '__main__':
     graph.add_edge(3, 4, 7)
     graph.add_edge(3, 0, 2)
     # print(graph.return_edge_list())
-    bellman_ford(graph, 0)
+    print(bellman_ford(graph, 0))
