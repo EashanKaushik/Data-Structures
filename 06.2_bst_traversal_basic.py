@@ -8,7 +8,7 @@ class BSTAdvance(BST):
 	# Recursion
 	# Inorder
 	def inorder_traversal(self):
-		
+
 		if self.root:
 			self.inorder_traversal_inner(self.root.left)
 
@@ -26,10 +26,10 @@ class BSTAdvance(BST):
 
 	# Preorder
 	def preorder_traversal(self):
-		
+
 		if self.root:
 			print(self.root.data)
-			
+
 			self.preorder_traversal_inner(self.root.left)
 
 			self.preorder_traversal_inner(self.root.right)
@@ -37,19 +37,19 @@ class BSTAdvance(BST):
 	def preorder_traversal_inner(self, root):
 		if root:
 			print(root.data)
-			
+
 			self.preorder_traversal_inner(root.left)
 
 			self.preorder_traversal_inner(root.right)
 
 	# Postorder
 	def postorder_traversal(self):
-		
-		if self.root:			
+
+		if self.root:
 			self.postorder_traversal_inner(self.root.left)
 
 			self.postorder_traversal_inner(self.root.right)
-			
+
 			print(self.root.data)
 
 	def postorder_traversal_inner(self, root):
@@ -72,13 +72,14 @@ class BSTAdvance(BST):
 			while not queue.is_empty():
 
 				next_node = queue.dequeue()
-				
+
 				print(next_node.data)
-				
+
 				if next_node.left:
 					queue.queue(next_node.left)
 				if next_node.right:
 					queue.queue(next_node.right)
+
 
 if __name__ == '__main__':
 	tree = BSTAdvance()
