@@ -1,4 +1,5 @@
 
+# O(n^2)
 def reverse_string(string):
     if len(string) == 0:
         return string
