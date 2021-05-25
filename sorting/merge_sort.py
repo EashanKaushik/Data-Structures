@@ -9,7 +9,7 @@ def merge_sort(arr):
         left = arr[:mid_index]
         right = arr[mid_index:]
 
-        # we want to sort both left and right arrays
+        # we want to sort both left and right arrays for all subarrays len(arr) > 1
         merge_sort(left)
         merge_sort(right)
 
