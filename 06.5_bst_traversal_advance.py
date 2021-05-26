@@ -20,7 +20,7 @@ class BSTVertical(BST):
 		queue.queue(curr_node)
 
 		while not queue.is_empty():
-			
+
 			curr_val = queue.dequeue()
 			curr_node = queue.dequeue()
 
@@ -54,7 +54,7 @@ class BSTVertical(BST):
 		queue.queue(curr_node)
 
 		while not queue.is_empty():
-			
+
 			curr_val = queue.dequeue()
 			curr_node = queue.dequeue()
 
@@ -87,7 +87,7 @@ class BSTVertical(BST):
 
 			if curr_node.left:
 				queue.queue(curr_node.left)
-			
+
 			if curr_node.right:
 				queue.queue(curr_node.right)
 
@@ -106,20 +106,20 @@ class BSTVertical(BST):
 
 			curr_node = queue.dequeue()
 			count -= 1
-			
+
 			if curr_node.right:
 				queue.queue(curr_node.right)
 
 			if curr_node.left:
 				queue.queue(curr_node.left)
-			
+
 
 			if count == 0:
 
 				print(curr_node.data)
 				count = queue.size()
 
-	def diagonal_view(self):
+	def diagonal_traversal(self):
 
 		queue = Queue()
 		curr_node = self.root
