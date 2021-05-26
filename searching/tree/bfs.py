@@ -1,5 +1,10 @@
 from node import make_tree
 
+# determine shortest path
+# determine closer nodes
+# why need bellman_ford or dijkstra?
+# bfs assumes all weights are same this is not the case in real world
+
 def bfs(root, value):
 
     queue = list()
